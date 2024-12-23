@@ -1,8 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using DotNetCoreApp.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
-
+using System.Threading.Tasks;  // <-- Add this line to fix the Task<> error
 
 namespace DotNetCoreApp.Controllers
 {
