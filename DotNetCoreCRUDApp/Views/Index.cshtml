@@ -1,0 +1,13 @@
+
+@model IEnumerable<DotNetCoreApp.Models.Item>
+
+<h1>Items List</h1>
+<a href="@Url.Action("Add")">Add New Item</a>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>@item.Name 
+            <a href="@Url.Action("Delete", new { id = item.Id })">Delete</a>
+        </li>
+    }
+</ul>
