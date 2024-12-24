@@ -1,4 +1,3 @@
-
 using System.ComponentModel.DataAnnotations;
 
 namespace DotNetCoreApp.Models
@@ -8,6 +7,6 @@ namespace DotNetCoreApp.Models
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; }
+        public string Name { get; set; }  // Ensure this is initialized, or mark it nullable
     }
 }
