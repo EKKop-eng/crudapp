@@ -1,12 +1,11 @@
-using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 
 namespace DotNetCoreApp.Models
 {
-    public class Item
+    public class ApplicationDbContext : DbContext
     {
-        public int Id { get; set; }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        [Required]
-        public string Name { get; set; }  // Ensure this is initialized, or mark it nullable
+        public DbSet<Item> Items { get; set; } = default!;  // Default initialization
     }
 }
